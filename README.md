@@ -2,6 +2,4 @@
 
 An example video:
 
-<video width="320" height="240" controls>
-  <source src="videos/animation_convergence.mp4" type="video/mp4">
-</video>
+https://github.com/jonahaag/Evolutionary-WFLO/blob/main/videos/animation_convergence.mp4
