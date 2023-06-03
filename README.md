@@ -1,22 +1,20 @@
 # Evolutionary-WFLO
 
-An example video:
+This repository contains the content and results of the project for the course 'Advanced Computations in Fluid Mechanics' at the Royal Institute of Technology (KTH) in the spring term 2023.
+It concerns the Wind Farm Layout Optimization (WFLO) problem, where, for a given number of turbines in a wind farm, the arrangement with the largest associated production is sought.
+For this, an evolutionary algorithm is used to generate candidate layouts.
+The project is implemented in Python using NumPy, Matplotlib and the finite element library FEniCS.
 
-10 turbines
+## Basic structure of the repository and code
 
-![fitness_history](https://github.com/jonahaag/Evolutionary-WFLO/assets/44704480/d9e00d3c-cfc5-4431-b5ba-3ef9e6c23aab)
+The implementation consists of
+- `main.py` which initializes the relevant parameters and controls the optimization process,
+- `wfsim.py` which contains the basic wind farm simulator using FEniCS,
+- `utils.py` which contains additional utilities for the wind farm simulator and the optimization process, and
+- `evolutionary_utils.py` which contains the basic utilities for the evolutionary algorithm.
 
-https://github.com/jonahaag/Evolutionary-WFLO/assets/44704480/587296c2-d957-4ec5-80d6-ab263e353c48
+## Report
 
-14 turbines
+The report explains the general methodology, describes and analyzes the results and tries to evaluate the suitability of the used approach.
 
-https://github.com/jonahaag/Evolutionary-WFLO/assets/44704480/8f2745bf-5533-46ac-98e2-63fa1784727d
-
-18 turbines!
-
-![fitness_history](https://github.com/jonahaag/Evolutionary-WFLO/assets/44704480/9237bb69-dda3-40bd-bc13-0cede6cc2e91)
-
-https://github.com/jonahaag/Evolutionary-WFLO/assets/44704480/3fda23fe-683f-4049-9eb0-3efd1fff0d37
-
-https://github.com/jonahaag/Evolutionary-WFLO/assets/44704480/9c500a79-89ea-45e3-b204-e6b35ac1b9dd
-
+Additional results as well as details regarding the implementation are discussed in [`appendix.md`](appendix.md).
