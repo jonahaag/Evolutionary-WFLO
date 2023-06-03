@@ -109,7 +109,7 @@ class WindFarm(UserExpression):
         value[0] = 0.
         for center in self.centers:
           if x[0] >= center[0]-self.width/2 and x[0] <= center[0]+self.width/2 and x[1] >= center[1]-self.height/2 and x[1] <= center[1]+self.height/2:
-            # TODO refine the porosity function
+            # TODO Optinal: refine the porosity function
             #value[0] = -self.Kinv * ((x[1] - center[1])/(self.height/2))**2 + self.Kinv
             value[0] = self.Kinv
 

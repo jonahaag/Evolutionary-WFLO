@@ -98,13 +98,6 @@ class Population():
                 valid_layout = check_layout_validity(turbine_centers, self.min_x_spacing, self.min_y_spacing, self.grid_width, self.grid_height)
             offspring.append(Individual(turbine_centers))
         return offspring
-    
-    # def crossover_asexual(self, parents_id):
-    #     offspring = []
-    #     for i in range(self.n_offspring):
-    #         parent = self.individuals[parents_id[i]]
-    #         offspring.append(Individual(parent.turbine_centers))
-    #     return offspring
 
     def mutate(self, individuals):
         for i in range(len(individuals)):
@@ -133,8 +126,6 @@ class Population():
             print(f'Individual {id}')
             T_end = 0.
             elapsed_time = 0.
-            # print('Centers:\n', self.centers_to_grid(self.individuals[id].turbine_centers))
-            # Only evaluate offspring / new individuals
             if self.individuals[id].fitness is None or self.individuals[id].mutated is True:
                 fitness, u, p = evaluate_layout(windFarmSimulator, self.individuals[id],\
                                                 self.min_x_spacing, self.min_y_spacing,\

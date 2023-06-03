@@ -113,30 +113,6 @@ class WindFarmSimulator():
             # print(f'Time t = {float(repr(t)):.2f}, fitness = {fitness_new:.4f}, last_update = {last_update}')
             self.fitnesses.append(fitness_new)
         self.elapsed_time = perf_counter() - tic
-        # fig, ax = plt.subplots()
-        # ax.plot(np.linspace(0,t,len(self.fitnesses),endpoint=True),self.fitnesses)
-        # ax.set_title("Fitness")
-        # ax.set_xlabel('Time')
-        # ax.set_ylabel('Fitness')
-        # # plt.axis('off')
-        # fig.tight_layout()
-        # fig.savefig(f'fitness.png',dpi=300, bbox_inches = 'tight')
-        # plt.close()
-
-        # x = self.turbine_centers[0,0]
-        # y = self.turbine_centers[0,1]
-        # print("Turbine center - turbine_height, u=", np.sqrt(u1(x,y-self.turbine_height)[0]**2 + u1(x,y-self.turbine_height)[1]**2))
-        # print("Turbine center - turbine_width, u=", np.sqrt(u1(x-self.turbine_width,y)[0]**2 + u1(x-self.turbine_width,y)[1]**2))
-        # print("Turbine center - turbine_width/2, u=", np.sqrt(u1(x-self.turbine_width/2,y)[0]**2 + u1(x-self.turbine_width/2,y)[1]**2))
-        # print("Turbine center, u=",np.sqrt(u1(x,y)[0]**2 + u1(x,y)[1]**2))
-        # print("Turbine center + turbine_width/2, u=",np.sqrt(u1(x+self.turbine_width/2,y)[0]**2 + u1(x+self.turbine_width/2,y)[1]**2))
-        # print("Turbine center + turbine_width, u=",np.sqrt(u1(x+self.turbine_width,y)[0]**2 + u1(x+self.turbine_width,y)[1]**2))
-        # print("Turbine center + turbine_height, u=",np.sqrt(u1(x+self.turbine_height,y)[0]**2 + u1(x+self.turbine_height,y)[1]**2))
-        # print("Turbine center + turbine_height*2, u=",np.sqrt(u1(x+self.turbine_height*2,y)[0]**2 + u1(x+self.turbine_height*2,y)[1]**2))
-        # print("Turbine center_y + turbine_height/2, u=",np.sqrt(u1(x,y+self.turbine_height/2+0.01)[0]**2 + u1(x,y+self.turbine_height/2+0.01)[1]**2))
-        # print("Turbine center_y - turbine_height/2, u=",np.sqrt(u1(x,y-self.turbine_height/2-0.01)[0]**2 + u1(x,y-self.turbine_height/2-0.01)[1]**2))
-        # self.plot_results(u1, p1, tag='test', path='history_10/')
-        # print(f'Simulation end time T = {float(repr(t)):.2f}')
         self.T_end = float(repr(t))
         return u1, p1
 
