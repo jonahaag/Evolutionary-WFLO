@@ -26,10 +26,6 @@ class Population():
             n = self.n_turbines
         grid_positions_x = np.random.randint(self.n_grid, size=n)
         grid_positions_y = np.random.randint(self.n_grid, size=n)
-        # grid_positions_x = np.array([0,1,2,2,3,3,4,6])
-        # grid_positions_y = np.array([6,3,0,6,0,3,0,6])
-        # grid_positions_x = np.arange(n)
-        # grid_positions_y = np.ones(n)
         turbine_centers_x = grid_positions_x * self.grid_width + self.wind_farm_shift_x + self.grid_width/2
         turbine_centers_y = grid_positions_y * self.grid_height + self.wind_farm_shift_y + self.grid_height/2
         turbine_centers = np.array([turbine_centers_x, turbine_centers_y]).T
